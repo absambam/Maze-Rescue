@@ -1,0 +1,16 @@
+#map-grid {
+    display: block;
+    width: fit-content;
+}
+
+.map-tile {
+    display: inline-block;
+    background-color: #212121;
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+}
+
+.map-row {
+    height: 100px;
+}
