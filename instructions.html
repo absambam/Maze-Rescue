@@ -4,6 +4,7 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="css/story.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico"/>
     <title> Game...Start! </title>
   </head>
   <body bgcolor="000000">
@@ -11,8 +12,7 @@
       <h1> Instructions </h1>
       <p> Use your keyboard ↑ ↓ ← → arrows to navigate. </p>
       <p> Each block can only be accessed once. Each unaccessed area will be marked with a black tile,
-          and each accessed area will be marked with a gray, purple, green, or blue tile after you have
-          moved from the block. </p>
+          and each accessed or inaccessible area will be marked with a gray, purple, green, or blue tile. </p>
 
       <nobr style="color:#808080;"> gray </nobr>
       <nobr> = normal tile <nobr><br>
@@ -21,12 +21,15 @@
       <nobr> green = antidote tile <nobr><br>
       <nobr style="color:blue;"> blue </nobr>
       <nobr> = riddle tile <nobr><br>
-			
+
       <p> Each level has a certain number of poison, antidote, and riddle blocks. <br>
           If you step on a poison block, you lose a life. <br>
           If you step on an antidote block, you gain a life. <br>
           If you step on a riddle block, you get a riddle to answer. Answer correctly,
           and you'll get another life. </p>
+			<p> Note that you start each level with exactly one life, so pay attention to where
+				  these special tiles are located and plan your lives correctly. In some levels,
+					you will need to answer all riddles correctly to complete the level. </p>
       <p> Note that all blocks must be stepped on exactly once to proveed to the next level, so plan
           your lives carefully! </p>
       <button class="accept" onclick="nextPage()"> Proceed </button>
