@@ -1,4 +1,4 @@
-createLevel1();
+createLevel2();
 
 
 document.addEventListener('keydown', moveUp);

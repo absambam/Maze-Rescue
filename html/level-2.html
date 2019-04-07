@@ -1,8 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Maze Rescue</title>
         <link rel="stylesheet" href="../css/levelUI.css" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
         <link rel="stylesheet" href="../css/map-component.css">
@@ -13,11 +12,11 @@
         <script src="../js/status-component.js"></script>
         <script src="../js/game-over.js"></script>
         <link rel="shortcut icon" href="../images/favicon.ico"/>
-        <title> Level 0 </title>
+        <title> Level 2 </title>
     </head>
     <body>
         <div id="title">
-            <h1>Level 0</h1>
+            <h1>Level 2</h1>
             <p>Use your keyboard ↑ ↓ ← → arrows to travel<br>across all the tiles to complete this stage.</p>
         </div>
         <div class="horizontal-block center">
@@ -25,13 +24,13 @@
             <script>
                 sessionStorage.setItem('lives', '1');
                 sessionStorage.setItem('antidote', '1');
-                sessionStorage.setItem('poison', '1');
+                sessionStorage.setItem('poison', '2');
                 sessionStorage.setItem('riddle', '1');
             </script>
             <div class="vertical-block">
-                <script>createLevel0();</script>
-                <script src="../level/level-0.js"></script>
-                <script src="../js/sprite-movement.js"></script>
+                <script>createLevel2();</script>
+                <script src="../level/level-2.js"></script>
+                <script src="../js/sprite-movement2.js"></script>
                 <div id="status-box" class="margin-2em">
                     <p id="status-text"></p>
                     <script>printStatus("s");</script>
@@ -40,7 +39,7 @@
                     <div id="counterTable"></div>
                     <script src="../js/counter-component.js"></script>
                     <div id="reset">
-                        <button onclick="location.reload()">reset</button>
+                        <button onclick="location.reload()"> Reset </button>
                     </div>
                 </div>
             </div>
