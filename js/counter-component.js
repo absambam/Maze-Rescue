@@ -43,24 +43,24 @@ function getLives(lifeCt) {
 }
 
 function getHeader() {
-  var header =    "---------------- <br>" +
-                  "| Remaining&nbsp&nbsp&nbsp | <br>" +
-                  "---------------- <br>";
+  var header =    "------------------- <br>" +
+                  "| Remaining Tiles | <br>" +
+                  "------------------- <br>";
   return header;
 }
 
 function getAntidoteLine(antidoteCt) {
-  var antidote = "| Antidote&nbsp&nbsp&nbsp" + antidoteCt + " | <br>";
+  var antidote = "| Antidote&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + antidoteCt + " | <br>";
   return antidote;
 }
 
 function getPoisonLine(poisonCt) {
-  var poison = "| Poison&nbsp&nbsp&nbsp&nbsp&nbsp" + poisonCt + " | <br>";
+  var poison = "| Poison&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + poisonCt + " | <br>";
   return poison;
 }
 
 function getRiddleLine(riddleCt) {
-  var riddle = "| Riddle&nbsp&nbsp&nbsp&nbsp&nbsp" + riddleCt + " | <br>" +
-               "---------------- <br>";
+  var riddle = "| Riddle&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + riddleCt + " | <br>" +
+               "------------------- <br>";
   return riddle;
 }
