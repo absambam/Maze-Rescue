@@ -1,4 +1,4 @@
-createLevel0();
+createLevel1();
 
 
 document.addEventListener('keydown', moveUp);
@@ -51,7 +51,7 @@ function moveUp(e) {
             }
         } else if (e.which == 40) {
             // go down
-            if (y < 2) {
+            if (y < 5) {
                 if (currGrid[y + 1][x] !== '.') {
                     var currVal = parseInt($('#avatar').css('top'), 10)
                     var newVal = currVal + 100;
@@ -130,13 +130,13 @@ function moveUp(e) {
 
     if (win) {
         $('body').append('<h2>Congrats!!</h2>');
-        location.href = '../story/after-0.html';
+        location.href = '../story/end.html';
     }
 }
 
 var x = 0;
-var y = 2;
-var unvisitedCount = 11;
+var y = 0;
+var unvisitedCount = 20;
 var gameOver = false;
 var win = false;
 
@@ -146,6 +146,13 @@ function setup() {
     $('#avatar').css('left', parseFloat($('#map-row-' + y).position().left) + 27 + 'px');
     currGrid[y][x] = '.';
     $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
+    for (var i = 0; i < 6; i++) {
+      for (var j = 0; j < 4; j++) {
+        if (currGrid[i][j] == '.'){
+          $('#map-row-' + i)[0].children[j].style.backgroundColor = '#808080';
+        }
+      }
+    }
 }
 
 window.onload = setup;
