@@ -1,4 +1,4 @@
-createLevel0();
+createLevel1();
 
 
 document.addEventListener('keydown', moveUp);
@@ -130,7 +130,7 @@ function moveUp(e) {
 
     if (win) {
         $('body').append('<h2>Congrats!!</h2>');
-        location.href = '../story/after-0.html';
+        location.href = '../story/after-1.html';
     }
 }
 

@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Maze Rescue</title>
         <link rel="stylesheet" href="../css/levelUI.css" type="text/css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
         <link rel="stylesheet" href="../css/map-component.css">
@@ -25,13 +24,13 @@
             <script>
                 sessionStorage.setItem('lives', '1');
                 sessionStorage.setItem('antidote', '1');
-                sessionStorage.setItem('poison', '2');
+                sessionStorage.setItem('poison', '1');
                 sessionStorage.setItem('riddle', '1');
             </script>
             <div class="vertical-block">
                 <script>createLevel1();</script>
                 <script src="../level/level-1.js"></script>
-                <script src="../js/sprite-movement2.js"></script>
+                <script src="../js/sprite-movement.js"></script>
                 <div id="status-box" class="margin-2em">
                     <p id="status-text"></p>
                     <script>printStatus("s");</script>
@@ -40,7 +39,7 @@
                     <div id="counterTable"></div>
                     <script src="../js/counter-component.js"></script>
                     <div id="reset">
-                        <button onclick="location.reload()"> Reset </button>
+                        <button onclick="location.reload()">reset</button>
                     </div>
                 </div>
             </div>
