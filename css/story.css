@@ -6,3 +6,14 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.accept {
+  font-family: 'Roboto Mono', Monospace;
+  background-color: #637074;
+  border: none;
+  color: #BDD4E7;
+  padding: 10px 12px;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+}
