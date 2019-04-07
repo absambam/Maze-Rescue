@@ -1,5 +1,6 @@
 createLevel0();
 
+
 document.addEventListener('keydown', moveUp);
 
 
@@ -64,6 +65,7 @@ function moveUp(e) {
             }
         }
         currGrid[y][x] = '.';
+        $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
         console.log(currGrid);
     }
 }
@@ -77,5 +79,6 @@ var unvisitedCount = 11;
 var gameOver = false;
 
 currGrid[y][x] = '.';
+$('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
 console.log(currGrid);
 console.log(map);
