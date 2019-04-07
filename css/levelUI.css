@@ -5,14 +5,35 @@ html, body {
     margin: 0;
 }
 
+button {
+    margin: 0 2em;
+    background-color: #637074;
+    border: none;
+    color: #37BD23;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: white;
+}
+
 .horizontal-block {
-    display: flex;
-    justify-content: center;
     margin-bottom: 25px;
 }
 
 .vertical-block {
     display: block;
+    justify-content: left;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
     justify-content: left;
 }
 
