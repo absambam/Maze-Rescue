@@ -1,3 +1,5 @@
+/* Creating the map for level 0 */
+
 var map = ['x', 'p', 'x', 'x',
     'r', 'x', 'x', 'x',
     'x', 'x', 'a', 'x'];
