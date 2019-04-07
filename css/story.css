@@ -1,3 +1,10 @@
+html, body {
+    font-family: 'Roboto Mono', Monopace;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
 h1 {
   font-size: 50px;
   padding-bottom: 30px;
@@ -10,16 +17,19 @@ nobr {
 }
 
 .storyText {
-  font-family: 'Roboto Mono', Monospace;
-  color: #37BD23;
-  padding-top: 75px;
-  padding-bottom: 40px;
-  padding-left: 250px;
-  padding-right: 250px;
+    color: #37BD23;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.instructionsText {
+    color: #37BD23;
+    padding: 75px;
 }
 
 .accept {
-  font-family: 'Roboto Mono', Monospace;
   background-color: #637074;
   border: none;
   color: #37BD23;
@@ -27,6 +37,6 @@ nobr {
   font-size: 20px;
 }
 
-button:hover {
-  background-color: white;
+#demo {
+    height: 200px;
 }
