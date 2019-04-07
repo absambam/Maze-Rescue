@@ -1,27 +1,29 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 	<head>
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/story.css" type="text/css"/>
 		<link rel="stylesheet" href="../css/after-0.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <title> Done! </title>
+    <title> Game...Continue! </title>
   </head>
   <body bgcolor="000000">
     <div class="storyText">
-      <h1>You did it!</h1>
-      <h2>Hooray!</h2>
+			<h1>You're getting places!</h1>
+      <h2>After clearing the puzzle,</h2>
       <p id="intro"></p>
-      <button class="accept" onclick="nextPage()"> Replay? </button>
+      <button class="accept" onclick="nextPage()"> Next </button>
       <script type="text/javascript">
         var i = 0;
-        var txt = "With your help, Emma was able to reach the mad scientist's lab!\n" +
-                  "After a fierce fight, Emma defeats the mad scientist " +
-                  "and leaves with Helen and Tuna. All is well."; /* The text */
-        var speed = 30; /* The speed/duration of the effect in milliseconds */
+        var txt = "Emma sees the mad scientist's lab in the distance. " +
+                  "She is about to continue onward when she hears a soft meow. " +
+                  "Looking around, she finds Helen's cat, Tuna, wandering around. " +
+                  "Emma picks up Tuna and continues on her journey. " +
+                  "Hang in there, Helen! Emma and Tuna are almost there!"; /* The text */
+        var speed = 20; /* The speed/duration of the effect in milliseconds */
 
         function nextPage() {
-          window.location.href = "../index.html";
+          window.location.href = "../html/level-1.html";
         }
 
         function typeWriter() {
