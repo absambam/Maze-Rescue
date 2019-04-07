@@ -2,11 +2,27 @@ function printStatus() {
     var state = "r";
     var status = checkState(state);
     document.getElementById("status-text").innerHTML = status;
+
+     $(".answer").click((e) => {
+        checkAnswer(e.target.id)
+    });
 }
 
 function checkAnswer(responseId) {
+    console.log("responseId: " + responseId);
+    var valid = false;
     var answers = ["b0", "b1", "a2", "a3", "c4", "c5"];
-    
+    for(var i = 0; i < answers.length; i += 1) {
+        if(answers[i] == responseId) {
+            valid = true;
+        }
+    }
+
+    if(valid == true) {
+        document.getElementById("status-text").innerHTML = "The troll says: 'That's correct! You shall pass.'";
+    } else {
+        document.getElementById("status-text").innerHTML = "The troll says: 'That ain't right. You gotta brush up your diversity facts.'";
+    }
 }
 
 function checkState(state) {
@@ -17,12 +33,12 @@ function checkState(state) {
     } else if(state == "x") { // default
         responseStr = "Nothing found here. <br> Time to move on.";
     } else if(state == "a") { // antidote
-        responseStr = "You found an antidote! Your number of hearts has increased by 1.";
+        responseStr = "You found an antidote! Your number of lives has increased by 1.";
     } else if(state == "r") { // riddle
         responseStr = "A troll has appeared, and requires you to answer a riddle: <br><br>";
         responseStr += generateRiddle();
     } else if(state == "p") { // poison
-        responseStr = "Oh no! You ran into a poisonous swamp. Your number of hearts has decreased by 1.";
+        responseStr = "Oh no! You ran into a poisonous swamp. Your number of lives has decreased by 1.";
     } else if(state == ".") { // visited
         responseStr = "Woops, can't turn back.";
     } else {
