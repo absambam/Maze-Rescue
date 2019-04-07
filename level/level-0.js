@@ -8,7 +8,7 @@ var currGrid = [['x', 'p', 'x', 'x'],
                 ['r', 'x', 'x', 'x'],
                 ['x', 'x', 'a', 'x']];
 
-function createLevel1() {
+function createLevel0() {
     console.log('map made...');
     console.log($('#map-grid'));
     for (i = 0; i < 3; i++) {
@@ -18,5 +18,5 @@ function createLevel1() {
         }
     }
     console.log('grid created');
-    $('#map-grid').append('<div id="avatar"></div>');
+    $('#map-grid').append('<div id="avatar"></div> ');
 }
