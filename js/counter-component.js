@@ -1,25 +1,39 @@
-document.getElementById("counterTable").innerHTML = printCounterTable();
+document.getElementById("counterTable").innerHTML = printCounterTable('poison');
 
 function printCounterTable(modify) {
   // Create table string to print
   var table = "";
 
+  var lifeCt = parseInt(sessionStorage.getItem('lives'));
   var antidoteCt = parseInt(sessionStorage.getItem('antidote'));
   var poisonCt = parseInt(sessionStorage.getItem('poison'));
   var riddleCt = parseInt(sessionStorage.getItem('riddle'));
 
-  if (modify == 'antidote') { antidoteCt--; }
-  else if (modify == 'poison') { poisonCt--; }
-  else if (modify == 'riddle') { riddleCt--; }
+  if (modify == 'antidote') {
+    antidoteCt--;
+    lifeCt++;
+  } else if (modify == 'poison') {
+    poisonCt--;
+    lifeCt--;
+  } else if (modify == 'riddle') {
+    riddleCt--;
+    lifeCt++;
+  }
 
+  var lives = getLives(lifeCt);
   var header = getHeader();
   var antidoteLine = getAntidoteLine(antidoteCt);
   var poisonLine = getPoisonLine(poisonCt);
   var riddleLine = getRiddleLine(riddleCt);
 
-  table = header + antidoteLine + poisonLine + riddleLine;
+  table = lives + header + antidoteLine + poisonLine + riddleLine;
 
   return table;
+}
+
+function getLives(lifeCt) {
+  var lives = "Lives: " + lifeCt + "<br>";
+  return lives;
 }
 
 function getHeader() {
