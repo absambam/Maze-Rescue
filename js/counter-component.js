@@ -2,13 +2,19 @@ function printCounterTable() {
     // Create table string to print
     var table = "";
 
+    var antidoteCount = 3;
+    var poisonCount = 2;
+    var riddleCount = 1;
+    var heartCount = 3;
+
     var header = getHeader();
-    var antidoteLine = getAntidoteLine(3);
-    var poisonLine = getPoisonLine(2);
-    var riddleLine = getRiddleLine(1);
+    var antidoteLine = getAntidoteLine(antidoteCount);
+    var poisonLine = getPoisonLine(poisonCount);
+    var riddleLine = getRiddleLine(riddleCount);
+    var heartLine = getHeartLine(heartCount);
     var footer = getFooter();
 
-    table = header + antidoteLine + poisonLine + riddleLine + footer;
+    table = header + antidoteLine + poisonLine + riddleLine + footer + heartLine + footer;
 
     // Print the table
     document.getElementById("counterTable").innerHTML = table;
@@ -39,4 +45,9 @@ function getRiddleLine(riddleCount) {
 function getFooter() {
     var footer = "----------------<br>";
     return footer;
+}
+
+function getHeartLine(heartCount) {
+    var heartLine =  "| Hearts &nbsp&nbsp&nbsp&nbsp" + heartCount + " |<br>";
+    return heartLine;
 }

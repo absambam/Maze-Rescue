@@ -1,5 +1,7 @@
 html, body {
     font-family: 'Roboto Mono', monospace;
+    color: #37BD23;
+    background-color: black;
     margin: 0;
 }
 
