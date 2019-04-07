@@ -1,8 +1,8 @@
 html, body {
-    font-family: 'Roboto Mono', Monopace;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+  font-family: 'Roboto Mono', Monopace;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -17,18 +17,18 @@ nobr {
 }
 
 .storyText {
-    color: #37BD23;
-    padding-top: 75px;
-    padding-bottom: 40px;
-    padding-left: 250px;
-    padding-right: 250px;
+  color: #37BD23;
+  padding-top: 75px;
+  padding-bottom: 40px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
 .instructionsText {
-    color: #37BD23;
-    padding: 75px;
-    padding-left: 200px;
-    padding-right: 250px;
+  color: #37BD23;
+  padding: 75px;
+  padding-left: 200px;
+  padding-right: 250px;
 }
 
 .accept {
