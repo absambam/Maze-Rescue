@@ -8,6 +8,7 @@ html, body {
 .horizontal-block {
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 
 .vertical-block {
@@ -41,7 +42,10 @@ html, body {
 }
 
 #counterTable {
-
+    width: fit-content;
+    margin-left: 2em;
+    padding: 1em;
+    border: 1px solid grey;
 }
 
 span {

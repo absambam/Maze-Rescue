@@ -16,7 +16,7 @@ function moveUp(e) {
                     x--;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        $('body').append('<h2>Game Over</h2>') 
+                        gameOver = true;
                     }
                 }
             }
@@ -30,7 +30,6 @@ function moveUp(e) {
                     y--;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        $('body').append('<h2>Game Over</h2>')
                         gameOver = true;
                     }
                 }
@@ -45,7 +44,7 @@ function moveUp(e) {
                     x++;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        $('body').append('<h2>Game Over</h2>')
+                        gameOver = true;
                     }
                 }
             }
@@ -59,11 +58,13 @@ function moveUp(e) {
                     y++;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        $('body').append('<h2>Game Over</h2>')
+                        gameOver = true;
                     }
                 }
             }
         }
+
+       
 
         currTile = currGrid[y][x];
         if (currTile === 'x') {
@@ -87,7 +88,36 @@ function moveUp(e) {
         if (currTile === 'x') {
             currGrid[y][x] = '.';
         }
-        console.log(currGrid);
+        // check if trapped ( no adjacent x tile)
+        var hasWayOut = false;
+        if (x > 0) {
+            if (currGrid[y][x - 1] !== '.') {
+                hasWayOut = true;
+            }
+        }
+        if (x < currGrid[0].length - 1) {
+            if (currGrid[y][x + 1] !== '.') {
+                hasWayOut = true;
+            }
+        }
+        if (y > 0) {
+            if (currGrid[y - 1][x] !== '.') {
+                hasWayOut = true;
+            }
+        }
+        if (y < currGrid.length - 1) {
+            if (currGrid[y + 1][x] !== '.') {
+                hasWayOut = true;
+            }
+        }
+
+        if (!hasWayOut) {
+            console.log('trapped!');
+            gameOver = true;
+        }
+    }
+    if (gameOver) {
+        $('body').append('<h2>Game Over</h2>')
     }
 }
 
