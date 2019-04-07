@@ -37,6 +37,10 @@ nobr {
   font-size: 20px;
 }
 
+button:hover {
+  background-color: white;
+}
+
 #demo {
     height: 200px;
 }
