@@ -89,7 +89,12 @@ var riddleCount = 1;
 var unvisitedCount = 11;
 var gameOver = false;
 
-currGrid[y][x] = '.';
-$('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
-console.log(currGrid);
-console.log(map);
+function setup() {
+    console.log($('#map-row-' + y).position());
+    $('#avatar').css('top', parseFloat($('#map-row-' + y).position().top) + 25 + 'px');
+    $('#avatar').css('left', parseFloat($('#map-row-' + y).position().left) + 27 + 'px');
+    currGrid[y][x] = '.';
+    $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
+}
+
+window.onload = setup;
