@@ -1,4 +1,4 @@
-document.getElementById("counterTable").innerHTML = printCounterTable('poison');
+document.getElementById("counterTable").innerHTML = printCounterTable();
 
 function printCounterTable(modify) {
   // Create table string to print
