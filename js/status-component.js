@@ -99,7 +99,7 @@ function generateRiddle() {
         case 5:
             riddleStr = "Who was the architect that designed the famous Vietnam Veterans Memorial in Washington, D.C.? <br><br>";
             riddleStr += "<span id='a5' class='answer'>A. Bjarke Ingels <br></span>";
-            riddleStr += "<span id='b5' class='answer'>B. I.M. Pei <br></span>";
+            riddleStr += "<span id='b5' class='answer'>B. Zaha Hadid <br></span>";
             riddleStr += "<span id='c5' class='answer'>C. Maya Lin <br></span>";
             break;
         default:
