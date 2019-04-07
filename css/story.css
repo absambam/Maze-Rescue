@@ -17,10 +17,11 @@ nobr {
 }
 
 .storyText {
-  padding-top: 75px;
-  padding-bottom: 40px;
-  padding-left: 250px;
-  padding-right: 250px;
+    color: #37BD23;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 
 .instructionsText {
