@@ -53,6 +53,9 @@ button:hover {
   -webkit-animation: sway 2s infinite linear;
 }
 
+#cat {
+  margin-top: 150px;
+}
 
 @keyframes sway {
   0% {
