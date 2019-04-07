@@ -1,5 +1,4 @@
-function printStatus() {
-    var state = "r";
+function printStatus(state) {
     var status = checkState(state);
     document.getElementById("status-text").innerHTML = status;
 
