@@ -21,18 +21,23 @@
         <div class="horizontal-block">
             <div class="vertical-block">
                 <div id="map-grid" class="margin-2em"></div>
+                <script>
+                  sessionStorage.setItem('antidote', '1');
+                  sessionStorage.setItem('poison', '1');
+                  sessionStorage.setItem('riddle', '1');
+                </script>
                 <div id="counterTable" class="margin-2em"></div>
-                <script>printCounterTable();</script>
+                <script src="../js/counter-component.js"></script>
             </div>
-            
+
             <script>createLevel0();</script>
             <div id="status-box" class="margin-2em">
                 <p id="status-text">
                 </p>
                 <script>printStatus();</script>
             </div>
-            
+
         </div>
-        
+
     </body>
 </html>

@@ -1,4 +1,4 @@
-document.getElementById("demo").innerHTML = printCounterTable('antidote');
+document.getElementById("counterTable").innerHTML = printCounterTable();
 
 function printCounterTable(modify) {
   // Create table string to print
