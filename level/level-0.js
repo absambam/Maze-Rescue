@@ -12,3 +12,4 @@ for (i = 0; i < 3; i++) {
     }
 }
 console.log('grid created');
+$('#map-grid').append('<div id="avatar"></div>');
