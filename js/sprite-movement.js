@@ -89,6 +89,7 @@ function moveUp(e) {
             document.getElementById("counterTable").innerHTML = printCounterTable('riddle');
             currGrid[y][x] = '.';
             printStatus('r');
+            document.removeEventListener('keydown', moveUp);
         }
         if (currTile === 'x') {
             currGrid[y][x] = '.';
@@ -123,7 +124,6 @@ function moveUp(e) {
         }
     }
     if (gameOver && !win) {
-        // $('body').append('<h2>Game Over</h2>');
         document.getElementById("status-text").innerHTML = "On no, you've reached a dead end. You've failed to save your friend. <br><br> Press F to pay respects. <br><br> GAME OVER.";
         $('#map-grid')[0].style.opacity = 0.3;
     }

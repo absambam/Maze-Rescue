@@ -22,12 +22,21 @@ function checkAnswer(responseId) {
     } else {
         document.getElementById("status-text").innerHTML = "The troll says: 'That ain't right. You gotta brush up your diversity facts.'";
     }
+
+    document.addEventListener('keydown', moveUp);
 }
 
 function checkState(state) {
     var responseStr = "";
 
-    if(state == "s") { // starting square
+    var lifeCt = parseInt(sessionStorage.getItem('lives'));
+    if(lifeCt <= 0) {
+        responseStr = "On no, you have no more lives. You've failed to save your friend. <br><br> Press F to pay respects. <br><br> GAME OVER.";
+        $('#map-grid')[0].style.opacity = 0.3;
+        document.removeEventListener('keydown', moveUp);
+
+        document.addEventListener('keydown', moveF);
+    } else if(state == "s") { // starting square
         responseStr = "We're on an adventure.";
     } else if(state == "x") { // default
         responseStr = "Nothing found here. <br> Time to move on.";
@@ -45,6 +54,12 @@ function checkState(state) {
     }
 
     return responseStr;
+}
+
+function moveF(e) {
+    if(e.which == 70) {
+        location.reload();
+    }
 }
 
 function generateRiddle() {

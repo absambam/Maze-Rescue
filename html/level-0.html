@@ -11,6 +11,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="../js/counter-component.js"></script>
         <script src="../js/status-component.js"></script>
+        <script src="../js/game-over.js"></script>
     </head>
     <body>
         <div id="title">
@@ -21,7 +22,7 @@
             <div class="vertical-block">
                 <div id="map-grid" class="margin-2em"></div>
                 <script>
-                  sessionStorage.setItem('lives', '0');
+                  sessionStorage.setItem('lives', '1');
                   sessionStorage.setItem('antidote', '1');
                   sessionStorage.setItem('poison', '1');
                   sessionStorage.setItem('riddle', '1');
