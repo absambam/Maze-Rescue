@@ -126,7 +126,8 @@ function moveUp(e) {
     }
 
     if (win) {
-        $('body').append('<h2>Congrats!!</h2>');        
+        $('body').append('<h2>Congrats!!</h2>');    
+        location.href = '../story/end.html';
     }
 }
 
