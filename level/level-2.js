@@ -24,5 +24,5 @@ function createLevel2() {
         }
     }
     console.log('grid created');
-    $('#map-grid').append('<img href="../images/emma-square-50.png" id="avatar"/>');
+    $('#map-grid').append('<div id="avatar"></div>');
 }

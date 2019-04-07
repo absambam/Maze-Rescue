@@ -20,12 +20,10 @@ body {
 }
 
 #avatar {
-    display: block;
     position: absolute;
     top: 227px;
     left: 26px;
     width:50px;
-    height: auto;
-    justify-content: center;
-
+    height:50px;
+    background-image:url('../images/emma-square-50_72ppi-01.png');
 }
