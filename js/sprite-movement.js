@@ -66,13 +66,17 @@ function moveUp(e) {
         }
 
         currTile = currGrid[y][x];
-        $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
-        if (currTile === 'p') {
+        if (currTile === 'x') {
+            $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
+        } else if (currTile === 'p') {
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'purple';
+            currGrid[y][x] = '.';
         } else if (currTile === 'a') {
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'green';
+            currGrid[y][x] = '.';
         } else if (currTile === 'r') {
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'blue';
+            currGrid[y][x] = '.';
         }
         if (currTile === 'x') {
             currGrid[y][x] = '.';
