@@ -70,23 +70,28 @@ function moveUp(e) {
         if (currTile === 'x') {
             // we landed on a normal unvisited tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
+            printStatus('x');
         } else if (currTile === 'p') {
             // we have landed on a poison tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'purple';
             document.getElementById("counterTable").innerHTML = printCounterTable('poison');
             currGrid[y][x] = '.';
+            printStatus('p');
         } else if (currTile === 'a') {
             // we have landed on an antidote tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'green';
             document.getElementById("counterTable").innerHTML = printCounterTable('antidote');
             currGrid[y][x] = '.';
+            printStatus('a');
         } else if (currTile === 'r') {
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'blue';
             document.getElementById("counterTable").innerHTML = printCounterTable('riddle');
             currGrid[y][x] = '.';
+            printStatus('r');
         }
         if (currTile === 'x') {
             currGrid[y][x] = '.';
+            printStatus('x');
         }
         // check if trapped ( no adjacent x tile)
         var hasWayOut = false;

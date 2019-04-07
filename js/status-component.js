@@ -1,5 +1,4 @@
-function printStatus() {
-    var state = "r";
+function printStatus(state) {
     var status = checkState(state);
     document.getElementById("status-text").innerHTML = status;
 
@@ -29,7 +28,7 @@ function checkState(state) {
     var responseStr = "";
 
     if(state == "s") { // starting square
-        responseStr = "Let's explore. <br> - edit this statement - ";
+        responseStr = "We're on an adventure.";
     } else if(state == "x") { // default
         responseStr = "Nothing found here. <br> Time to move on.";
     } else if(state == "a") { // antidote
