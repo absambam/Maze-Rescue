@@ -54,7 +54,9 @@ button:hover {
 }
 
 #cat {
-  margin-top: 150px;
+    margin-top: 150px;
+    animation: float 0.25s ease-out infinite; 
+    -webkit-animation: float 0.25s ease-out infinite;
 }
 
 @keyframes sway {
@@ -109,4 +111,34 @@ button:hover {
       transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
   }
+}
+
+@keyframes float {
+    0% {
+        margin-top: -100px;
+    }
+
+    50% {
+        margin-top: -125px;
+    }
+
+    100% {
+        margin-top: -100px;
+    }
+}
+
+@-webkit-keyframes float {
+    0%
+
+{
+    margin-top: -100px;
+}
+
+50% {
+    margin-top: -125px;
+}
+
+100% {
+    margin-top: -100px;
+}
 }
