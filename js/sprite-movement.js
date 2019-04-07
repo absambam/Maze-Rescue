@@ -16,7 +16,7 @@ function moveUp(e) {
                     x--;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        gameOver = true;
+                        win = true;
                     }
                 }
             }
@@ -30,7 +30,7 @@ function moveUp(e) {
                     y--;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        gameOver = true;
+                        win = true;
                     }
                 }
             }
@@ -44,7 +44,7 @@ function moveUp(e) {
                     x++;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        gameOver = true;
+                        win = true;
                     }
                 }
             }
@@ -58,7 +58,7 @@ function moveUp(e) {
                     y++;
                     unvisitedCount--;
                     if (unvisitedCount == 0) {
-                        gameOver = true;
+                        win = true;
                     }
                 }
             }
@@ -116,8 +116,12 @@ function moveUp(e) {
             gameOver = true;
         }
     }
-    if (gameOver) {
-        $('body').append('<h2>Game Over</h2>')
+    if (gameOver && !win) {
+        $('body').append('<h2>Game Over</h2>');
+    }
+
+    if (win) {
+        $('body').append('<h2>Congrats!!</h2>');        
     }
 }
 
@@ -125,6 +129,7 @@ var x = 0;
 var y = 2;
 var unvisitedCount = 11;
 var gameOver = false;
+var win = false;
 
 function setup() {
     console.log($('#map-row-' + y).position());
