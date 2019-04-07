@@ -15,18 +15,25 @@
     </head>
     <body>
         <div id="title">
-            <h1>Level 0</h1>
-            <p>Use the up, down, left, and right arrows to travel<br>across all the tiles to complete this stage.</p>
+            <h1>Level 0</h1>    
+            <p>Use your keyboard ↑ ↓ ← → arrows to travel<br>across all the tiles to complete this stage.</p>
         </div>
         <div class="horizontal-block center">
+            <div id="map-grid" class="margin-2em"></div>
+            <script>
+                sessionStorage.setItem('lives', '1');
+                sessionStorage.setItem('antidote', '1');
+                sessionStorage.setItem('poison', '1');
+                sessionStorage.setItem('riddle', '1');
+            </script>
             <div class="vertical-block">
-                <div id="map-grid" class="margin-2em"></div>
-                <script>
-                  sessionStorage.setItem('lives', '1');
-                  sessionStorage.setItem('antidote', '1');
-                  sessionStorage.setItem('poison', '1');
-                  sessionStorage.setItem('riddle', '1');
-                </script>
+                <script>createLevel0();</script>
+                <script src="../level/level-0.js"></script>
+                <script src="../js/sprite-movement.js"></script>
+                <div id="status-box" class="margin-2em">
+                    <p id="status-text"></p>
+                    <script>printStatus("s");</script>
+                </div>
                 <div class="horizontal-block left">
                     <div id="counterTable"></div>
                     <script src="../js/counter-component.js"></script>
@@ -35,14 +42,7 @@
                     </div>
                 </div>
             </div>
-
-            <script>createLevel0();</script>
-            <script src="../level/level-0.js"></script>
-            <script src="../js/sprite-movement.js"></script>
-            <div id="status-box" class="margin-2em">
-                <p id="status-text"></p>
-                <script>printStatus("s");</script>
-            </div>
+            
         </div>
 
     </body>
