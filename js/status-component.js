@@ -20,6 +20,9 @@ function checkAnswer(responseId) {
 
     if(valid == true) {
         document.getElementById("status-text").innerHTML = "The troll says: 'That's correct! You shall pass.'";
+        var lifeCt = parseInt(sessionStorage.getItem('lives'));
+        lifeCt++;
+        sessionStorage.setItem('lives', lifeCt);
     } else {
         document.getElementById("status-text").innerHTML = "The troll says: 'That ain't right. You gotta brush up your diversity facts.'";
     }
