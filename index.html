@@ -11,8 +11,9 @@
     <div class="storyText">
       <h1>Maze Rescue</h1>
       <h2>Oh no!</h2>
+			<img src="images/emma-square-50.png" alt="It's Emma!" align="right">
       <p id="demo"></p>
-      <button class="accept" onclick="nextPage()"> Proceed </button>
+      <button class="accept" onclick="nextPage()"> Proceed </button><br>
       <script type="text/javascript">
         var i = 0;
         var txt = "A mad scientist has kidnapped Emma's friend Helen to try and steal her research!\n " +
@@ -20,7 +21,7 @@
                   "find out that the only route to the lab is riddled with puzzles and traps.\n " +
                   "If Emma is going to rescue Helen before it's too late, she will need " +
                   "your help!\n Will you rise to accept the challenge?"; /* The text */
-        var speed = 30; /* The speed/duration of the effect in milliseconds */
+        var speed = 20; /* The speed/duration of the effect in milliseconds */
 
         function nextPage() {
           window.location.href = "instructions.html";
