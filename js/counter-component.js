@@ -17,6 +17,7 @@ function printCounterTable(modify) {
     lifeCt--;
   } else if (modify == 'riddle') {
     riddleCt--;
+  } else if (modify == 'valid') {
     lifeCt++;
   }
 

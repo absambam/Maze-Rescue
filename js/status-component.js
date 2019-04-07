@@ -9,7 +9,6 @@ function printStatus() {
 }
 
 function checkAnswer(responseId) {
-    console.log("responseId: " + responseId);
     var valid = false;
     var answers = ["b0", "b1", "a2", "a3", "c4", "c5"];
     for(var i = 0; i < answers.length; i += 1) {
@@ -20,9 +19,7 @@ function checkAnswer(responseId) {
 
     if(valid == true) {
         document.getElementById("status-text").innerHTML = "The troll says: 'That's correct! You shall pass.'";
-        var lifeCt = parseInt(sessionStorage.getItem('lives'));
-        lifeCt++;
-        sessionStorage.setItem('lives', lifeCt);
+        document.getElementById("counterTable").innerHTML = printCounterTable('valid');
     } else {
         document.getElementById("status-text").innerHTML = "The troll says: 'That ain't right. You gotta brush up your diversity facts.'";
     }
