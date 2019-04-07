@@ -32,6 +32,7 @@ nobr {
 }
 
 .accept {
+  margin-top: 10px;
   background-color: #637074;
   border: none;
   color: #37BD23;
