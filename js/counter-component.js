@@ -1,4 +1,4 @@
-document.getElementById("demo").innerHTML = printCounterTable();
+document.getElementById("demo").innerHTML = printCounterTable('antidote');
 
 function printCounterTable(modify) {
   // Create table string to print
@@ -10,12 +10,12 @@ function printCounterTable(modify) {
 
   if (modify == 'antidote') { antidoteCt--; }
   else if (modify == 'poison') { poisonCt--; }
-  else { riddleCt--; }
+  else if (modify == 'riddle') { riddleCt--; }
 
   var header = getHeader();
-  var antidoteLine = getAntidoteLine();
-  var poisonLine = getPoisonLine();
-  var riddleLine = getRiddleLine();
+  var antidoteLine = getAntidoteLine(antidoteCt);
+  var poisonLine = getPoisonLine(poisonCt);
+  var riddleLine = getRiddleLine(riddleCt);
 
   table = header + antidoteLine + poisonLine + riddleLine;
 
@@ -24,23 +24,23 @@ function printCounterTable(modify) {
 
 function getHeader() {
   var header =    "---------------- <br>" +
-                  "| Remaining    | <br>" +
+                  "| Remaining&nbsp&nbsp&nbsp | <br>" +
                   "---------------- <br>";
   return header;
 }
 
-function getAntidoteLine() {
-  var antidote = "| Antidote   " +  + " | <br>";
+function getAntidoteLine(antidoteCt) {
+  var antidote = "| Antidote&nbsp&nbsp&nbsp" + antidoteCt + " | <br>";
   return antidote;
 }
 
-function getPoisonLine() {
-  var poison = "| Poison     2 | <br>";
+function getPoisonLine(poisonCt) {
+  var poison = "| Poison&nbsp&nbsp&nbsp&nbsp&nbsp" + poisonCt + " | <br>";
   return poison;
 }
 
-function getRiddleLine() {
-  var riddle = "| Riddle     1 | <br>" +
+function getRiddleLine(riddleCt) {
+  var riddle = "| Riddle&nbsp&nbsp&nbsp&nbsp&nbsp" + riddleCt + " | <br>" +
                "---------------- <br>";
   return riddle;
 }

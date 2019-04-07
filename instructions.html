@@ -13,15 +13,15 @@
       <p> Each block can only be accessed once. Each unaccessed area will be marked with a black tile,
           and each accessed area will be marked with a gray, purple, green, or blue tile after you have
           moved from the block. </p>
-      <div class="modifiedP">
-        <nobr style="color:#808080;"> gray </nobr>
-        <nobr> = normal tile <nobr><br>
-        <nobr style="color:purple;"> purple </nobr>
-        <nobr> = poison tile <nobr><br>
-        <nobr> green = antidote tile <nobr><br>
-        <nobr style="color:blue;"> blue </nobr>
-        <nobr> = riddle tile <nobr><br>
-      </div>
+
+      <nobr style="color:#808080;"> gray </nobr>
+      <nobr> = normal tile <nobr><br>
+      <nobr style="color:purple;"> purple </nobr>
+      <nobr> = poison tile <nobr><br>
+      <nobr> green = antidote tile <nobr><br>
+      <nobr style="color:blue;"> blue </nobr>
+      <nobr> = riddle tile <nobr><br>
+			
       <p> Each level has a certain number of poison, antidote, and riddle blocks. <br>
           If you step on a poison block, you lose a life. <br>
           If you step on an antidote block, you gain a life. <br>
@@ -30,12 +30,11 @@
       <p> Note that all blocks must be stepped on exactly once to proveed to the next level, so plan
           your lives carefully </p>
       <button class="accept" onclick="nextPage()"> Proceed </button>
-
-      <script>
-        function nextPage() {
-          window.location.href = "level/level-0.js";
-        }
-      </script>
-    </div>
+		</div>
+    <script>
+      function nextPage() {
+        window.location.href = "html/level-0.html";
+      }
+    </script>
   </body>
 </html>
