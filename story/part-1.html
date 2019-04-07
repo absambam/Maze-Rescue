@@ -2,11 +2,30 @@
 <html lang="en">
 	<head>
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title> Welcome to the Crib v3.0 </title>
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="stylesheet" href="../css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/story.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <title> Game...Start! </title>
   </head>
   <body bgcolor="41463d">
+    <div class="storyText">
+      <h3>Oh no!</h3>
+      <p id="demo"></p>
+      <script type="text/javascript">
+        var i = 0;
+        var txt = "Emma's friend, Helen, has been captured by the mad scientist of the East.\n " +
+                  "Emma was able to find a map that leads to the mad scientist's lab, only to " +
+                  "find out that the only route to the lab was full of puzzles and traps."; /* The text */
+        var speed = 50; /* The speed/duration of the effect in milliseconds */
 
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+      </script>
+    </div>
   </body>
 </html>
