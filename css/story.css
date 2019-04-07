@@ -47,3 +47,63 @@ button:hover {
 #demo {
     height: 200px;
 }
+
+.avatar {
+  animation: sway 2s infinite linear;
+  -webkit-animation: sway 2s infinite linear;
+}
+
+
+@keyframes sway {
+  0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+  }
+
+  50% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+  75% {
+      transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes sway {
+  0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+      transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+  }
+
+  50% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+  75% {
+      transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+}
