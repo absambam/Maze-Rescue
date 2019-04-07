@@ -3,10 +3,11 @@ createLevel0();
 
 document.addEventListener('keydown', moveUp);
 
-
 function moveUp(e) {
     if (unvisitedCount > 0) {
-        if (e.which == 37) {
+        if(e.which == 70) {
+            location.reload();
+        } else if (e.which == 37) {
             // go left
             if (x > 0) {
                 if (currGrid[y][x - 1] !== '.') {
@@ -122,7 +123,9 @@ function moveUp(e) {
         }
     }
     if (gameOver && !win) {
-        $('body').append('<h2>Game Over</h2>');
+        // $('body').append('<h2>Game Over</h2>');
+        document.getElementById("status-text").innerHTML = "On no, you've reached a dead end. You've failed to save your friend. <br><br> Press F to pay respects. <br><br> GAME OVER.";
+        $('#map-grid')[0].style.opacity = 0.3;
     }
 
     if (win) {
