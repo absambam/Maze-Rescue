@@ -29,9 +29,7 @@ function checkState(state) {
 
 function generateRiddle() {
     var riddleStr = "";
-    // var index = Math.floor(Math.random() * 5);
-    var index = 0;
-    console.log(index);
+    var index = Math.floor(Math.random() * 6);
     switch(index) {
         case 0:
             riddleStr = "Of males and females that attend hackathons, what's the average number each gender attends? <br><br>";
@@ -41,33 +39,33 @@ function generateRiddle() {
             break;
         case 1:
             riddleStr = "Who was the first female Nobel prize winner? <br><br>";
-            riddleStr += "A. Rosalind Franklin <br>";
-            riddleStr += "B. Marie Curie <br>";
-            riddleStr += "C. Grace Hopper <br>";
+            riddleStr += "<span id='a'class='answer'>A. Rosalind Franklin <br></span>";
+            riddleStr += "<span id='a'class='answer'>B. Marie Curie <br></span>";
+            riddleStr += "<span id='a'class='answer'>C. Grace Hopper <br></span>";
             break;
         case 2:
             riddleStr = "Who invented the first compiler? <br><br>";
-            riddleStr += "A. Grace Hopper <br>";
-            riddleStr += "B. Ada Lovelace <br>";
-            riddleStr += "C. Katherine Johnson <br>";
+            riddleStr += "<span id='a'class='answer'>A. Grace Hopper <br></span>";
+            riddleStr += "<span id='a'class='answer'>B. Ada Lovelace <br></span>";
+            riddleStr += "<span id='a'class='answer'>C. Katherine Johnson <br></span>";
             break;
         case 3:
             riddleStr = "What did Rosalind Franklin help shape our knowledge about? <br><br>";
-            riddleStr += "A. The sewing machine<br>";
-            riddleStr += "B. DNA model<br>";
-            riddleStr += "C. Dinosaurs<br>";
+            riddleStr += "<span id='a'class='answer'>A. The sewing machine<br></span>";
+            riddleStr += "<span id='a'class='answer'>B. DNA model<br></span>";
+            riddleStr += "<span id='a'class='answer'>C. Dinosaurs<br></span>";
             break;
         case 4:
             riddleStr = "Who wrote the first algorithm meant to be processed by a machine? <br><br>";
-            riddleStr += "A. Charles Babbage<br>";
-            riddleStr += "B. Alan Turing<br>";
-            riddleStr += "C. Ada Lovelace<br>";
+            riddleStr += "<span id='a'class='answer'>A. Charles Babbage<br></span>";
+            riddleStr += "<span id='a'class='answer'>B. Alan Turing<br></span>";
+            riddleStr += "<span id='a'class='answer'>C. Ada Lovelace<br></span>";
             break;
         case 5:
-            riddleStr = "What did Rosalind Franklin help shape our knowledge about? <br><br>";
-            riddleStr += "A. The sewing machine<br>";
-            riddleStr += "B. DNA model<br>";
-            riddleStr += "C. Dinosaurs<br>";
+            riddleStr = "Who was the architect that designed the famous Vietnam Veterans Memorial in Washington, D.C.? <br><br>";
+            riddleStr += "<span id='a'class='answer'>A. Bjarke Ingels <br></span>";
+            riddleStr += "<span id='a'class='answer'>B. Maya Lin <br></span>";
+            riddleStr += "<span id='a'class='answer'>C. I.M. Pei <br></span>";
             break;
         default:
             riddleStr = "Unknown index";
