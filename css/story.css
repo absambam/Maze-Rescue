@@ -27,6 +27,8 @@ nobr {
 .instructionsText {
     color: #37BD23;
     padding: 75px;
+    padding-left: 200px;
+    padding-right: 250px;
 }
 
 .accept {
