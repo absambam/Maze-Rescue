@@ -20,6 +20,11 @@ function printCounterTable(modify) {
     lifeCt++;
   }
 
+  sessionStorage.setItem('lives', lifeCt);
+  sessionStorage.setItem('antidote', antidoteCt);
+  sessionStorage.setItem('poison', poisonCt);
+  sessionStorage.setItem('riddle', riddleCt);
+
   var lives = getLives(lifeCt);
   var header = getHeader();
   var antidoteLine = getAntidoteLine(antidoteCt);
