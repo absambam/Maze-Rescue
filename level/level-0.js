@@ -14,7 +14,7 @@ function createLevel0() {
     for (i = 0; i < 3; i++) {
         $('#map-grid').append('<div class="map-row" id="map-row-' + i + '"></div>');
         for (j = 0; j < map[i].length; j++) {
-            $('#map-row-' + i).append('<div class="map-tile"></div>');
+            $('#map-row-' + i).append('<div id="tile-' + j + '" class="map-tile"></div>');
         }
     }
     console.log('grid created');
