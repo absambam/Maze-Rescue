@@ -64,8 +64,19 @@ function moveUp(e) {
                 }
             }
         }
-        currGrid[y][x] = '.';
+
+        currTile = currGrid[y][x];
         $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
+        if (currTile === 'p') {
+            $('#map-row-' + y)[0].children[x].style.backgroundColor = 'purple';
+        } else if (currTile === 'a') {
+            $('#map-row-' + y)[0].children[x].style.backgroundColor = 'green';
+        } else if (currTile === 'r') {
+            $('#map-row-' + y)[0].children[x].style.backgroundColor = 'blue';
+        }
+        if (currTile === 'x') {
+            currGrid[y][x] = '.';
+        }
         console.log(currGrid);
     }
 }
