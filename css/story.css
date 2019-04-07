@@ -26,3 +26,7 @@ nobr {
   padding: 10px 12px;
   font-size: 20px;
 }
+
+button:hover {
+  background-color: white;
+}

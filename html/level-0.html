@@ -16,7 +16,7 @@
         <div id="title">
             <h1>Level 0</h1>
         </div>
-        <div class="horizontal-block">
+        <div class="horizontal-block center">
             <div class="vertical-block">
                 <div id="map-grid" class="margin-2em"></div>
                 <script>
@@ -25,8 +25,13 @@
                   sessionStorage.setItem('poison', '1');
                   sessionStorage.setItem('riddle', '1');
                 </script>
-                <div id="counterTable"></div>
-                <script src="../js/counter-component.js"></script>
+                <div class="horizontal-block left">
+                    <div id="counterTable"></div>
+                    <script src="../js/counter-component.js"></script>
+                    <div id="reset">
+                        <button onclick="location.reload()">reset</button>
+                    </div>
+                </div>
             </div>
 
             <script>createLevel0();</script>
