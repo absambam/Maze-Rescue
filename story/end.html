@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/story.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <title> Game...Start! </title>
+  </head>
+  <body bgcolor="000000">
+    <div class="storyText">
+      <h1>Maze Rescue</h1>
+      <h2>Oh no!</h2>
+      <p id="intro"></p>
+      <button class="accept" onclick="nextPage()"> Replay? </button>
+      <script type="text/javascript">
+        var i = 0;
+        var txt = "With your help, Emma was able to reach the mad scientist's lab!\n" +
+                  "After a fierce fight, Emma was able to defeat the mad scientist " +
+                  "and leave with Helen."; /* The text */
+        var speed = 30; /* The speed/duration of the effect in milliseconds */
+
+        function nextPage() {
+          window.location.href = "../level/level-0.js";
+        }
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("intro").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    color: #37BD23;
+    background-color: black;
+    margin: 0;
+}
+
+.horizontal-block {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-block {
+    display: block;
+    justify-content: left;
+}
+
+#title {
+    margin-top: 3em;
+    text-align: center;
+}
+
+.margin-2em {
+    margin: 2em;
+}
+
+#map-grid {
+
+}
+
+#status-box {
+    height: 300px;
+    width: 300px;
+    border: 1px solid grey;
+    word-wrap: break-word;
+}
+
+#status-text {
+    margin: 2em;
+}
+
+#counterTable {
+
+}
