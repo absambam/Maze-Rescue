@@ -67,15 +67,21 @@ function moveUp(e) {
 
         currTile = currGrid[y][x];
         if (currTile === 'x') {
+            // we landed on a normal unvisited tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = '#808080';
         } else if (currTile === 'p') {
+            // we have landed on a poison tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'purple';
+            document.getElementById("counterTable").innerHTML = printCounterTable('poison');
             currGrid[y][x] = '.';
         } else if (currTile === 'a') {
+            // we have landed on an antidote tile
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'green';
+            document.getElementById("counterTable").innerHTML = printCounterTable('antidote');
             currGrid[y][x] = '.';
         } else if (currTile === 'r') {
             $('#map-row-' + y)[0].children[x].style.backgroundColor = 'blue';
+            document.getElementById("counterTable").innerHTML = printCounterTable('riddle');
             currGrid[y][x] = '.';
         }
         if (currTile === 'x') {
@@ -87,9 +93,6 @@ function moveUp(e) {
 
 var x = 0;
 var y = 2;
-var antidoteCount = 1;
-var poisonCount = 1;
-var riddleCount = 1;
 var unvisitedCount = 11;
 var gameOver = false;
 
