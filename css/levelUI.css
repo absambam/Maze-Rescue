@@ -1,3 +1,29 @@
 html, body {
     font-family: 'Roboto Mono', monospace;
+    margin: 0;
+}
+
+.game-content {
+    display: flex;
+    justify-content: center;
+}
+
+#title {
+    margin-top: 3em;
+    text-align: center;
+    
+}
+
+#map {
+    margin: 2em;
+    width: 500px;
+    height: 400px;
+    background-color: red;
+}
+
+#counterTable {
+    margin: 2em;
+    width: 200px;
+    height: 400px;
+    background-color: blue;
 }
